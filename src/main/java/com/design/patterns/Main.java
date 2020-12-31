@@ -4,6 +4,7 @@ import com.design.patterns.structural.adapter.FileTypeConverter;
 import com.design.patterns.structural.adapter.impl.FileConverter;
 import com.design.patterns.structural.adapter.enums.FileType;
 import com.design.patterns.structural.adapter.impl.FileConverterAdapter;
+import com.design.patterns.structural.bridge.*;
 import com.design.patterns.structural.decorator.Account;
 import com.design.patterns.structural.decorator.CheckingAccount;
 import com.design.patterns.structural.decorator.PlatinumCheckingAccount;
@@ -51,6 +52,24 @@ public class Main {
         System.out.println("Total Balance - Checking Account = R$ " + account.getTotalBalance());
         account = new PlatinumCheckingAccount(account);
         System.out.println("Total Balance - Platinum Checking Account (Overdraft + " + account.getOverdraft() + ") R$ " + account.getTotalBalance());
+
+        System.out.println("");
+
+        System.out.println("Structural -> Bridge");
+
+        Company company1 = new SmallSizeCompany("Doug Book Store", new SmallPartnershipTax());
+        System.out.println("Name :" + company1.getName());
+        System.out.println("Liquid Assets : " + company1.getLiquidAssets(200.000));
+
+        Company company2 = new MicroSizeCompany("Trisha Auto Parts", new SmallPartnershipTax());
+        System.out.println("Name :" + company2.getName());
+        System.out.println("Liquid Assets : " + company2.getLiquidAssets(40.000));
+
+        Company company3 = new MidSizeCompany("Target Mall", new SmallCorporationTax());
+        System.out.println("Name :" + company3.getName());
+        System.out.println("Liquid Assets : " + company3.getLiquidAssets(1000.000));
+
+
     }
 
 }
