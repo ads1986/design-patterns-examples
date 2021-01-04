@@ -5,6 +5,7 @@ import com.design.patterns.structural.adapter.impl.FileConverter;
 import com.design.patterns.structural.adapter.enums.FileType;
 import com.design.patterns.structural.adapter.impl.FileConverterAdapter;
 import com.design.patterns.structural.bridge.*;
+import com.design.patterns.structural.composite.PointOfSale;
 import com.design.patterns.structural.decorator.Account;
 import com.design.patterns.structural.decorator.CheckingAccount;
 import com.design.patterns.structural.decorator.PlatinumCheckingAccount;
@@ -68,6 +69,10 @@ public class Main {
         Company company3 = new MidSizeCompany("Target Mall", new SmallCorporationTax());
         System.out.println("Name :" + company3.getName());
         System.out.println("Liquid Assets : " + company3.getLiquidAssets(1000.000));
+
+        System.out.println("Structural -> Composite");
+        PointOfSale pointOfSale = new PointOfSale();
+        System.out.println("Total : " + pointOfSale.getTotalPrice().getPrice());
 
 
     }
