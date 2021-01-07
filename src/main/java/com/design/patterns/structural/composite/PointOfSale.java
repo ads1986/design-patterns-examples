@@ -1,8 +1,5 @@
 package com.design.patterns.structural.composite;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class PointOfSale {
 
     public Component getTotalPrice(){

@@ -11,12 +11,18 @@ import com.design.patterns.structural.decorator.CheckingAccount;
 import com.design.patterns.structural.decorator.PlatinumCheckingAccount;
 import com.design.patterns.structural.facade.CalculusFacadeImpl;
 import com.design.patterns.structural.facade.CalculusService;
+import com.design.patterns.structural.flightweight.Address;
+import com.design.patterns.structural.flightweight.PlaceOrder;
+import com.design.patterns.structural.flightweight.Product;
 import com.design.patterns.structural.proxy.ProxyUserServiceImpl;
 import com.design.patterns.structural.proxy.User;
 import com.design.patterns.structural.proxy.UserService;
 
 import java.io.File;
+import java.util.Collections;
 import java.util.List;
+
+import static java.util.Collections.singletonList;
 
 /**
     Design Patterns Examples
@@ -74,6 +80,11 @@ public class Main {
         PointOfSale pointOfSale = new PointOfSale();
         System.out.println("Total : " + pointOfSale.getTotalPrice().getPrice());
 
+        System.out.println("Structural -> FlightWeight");
+        PlaceOrder placeOrder = new PlaceOrder();
+        placeOrder.placeOrder(singletonList(new Product()), "mainStorage", new Address("customer", "Leonard Avenue", "32"));
+        placeOrder.placeOrder(singletonList(new Product()), "mainStorage", new Address("customer", "Richard Avenue", "3000"));
+        placeOrder.placeOrder(singletonList(new Product()), "store2", new Address("customer", "Golf Avenue", "100"));
 
     }
 
