@@ -1,5 +1,9 @@
 package com.design.patterns;
 
+import com.design.patterns.creational.factory.FactoryPropertyTax;
+import com.design.patterns.creational.factory.FactorySaleTax;
+import com.design.patterns.creational.factory.FactoryTax;
+import com.design.patterns.creational.factory.Fee;
 import com.design.patterns.structural.adapter.FileTypeConverter;
 import com.design.patterns.structural.adapter.impl.FileConverter;
 import com.design.patterns.structural.adapter.enums.FileType;
@@ -19,7 +23,6 @@ import com.design.patterns.structural.proxy.User;
 import com.design.patterns.structural.proxy.UserService;
 
 import java.io.File;
-import java.util.Collections;
 import java.util.List;
 
 import static java.util.Collections.singletonList;
@@ -76,9 +79,13 @@ public class Main {
         System.out.println("Name :" + company3.getName());
         System.out.println("Liquid Assets : " + company3.getLiquidAssets(1000.000));
 
+        System.out.println("");
+
         System.out.println("Structural -> Composite");
         PointOfSale pointOfSale = new PointOfSale();
         System.out.println("Total : " + pointOfSale.getTotalPrice().getPrice());
+
+        System.out.println("");
 
         System.out.println("Structural -> FlightWeight");
         PlaceOrder placeOrder = new PlaceOrder();
@@ -86,6 +93,13 @@ public class Main {
         placeOrder.placeOrder(singletonList(new Product()), "mainStorage", new Address("customer", "Richard Avenue", "3000"));
         placeOrder.placeOrder(singletonList(new Product()), "store2", new Address("customer", "Golf Avenue", "100"));
 
+        System.out.println("");
+
+        System.out.println("Creational -> Factory Method");
+        FactoryTax saleTax = new FactorySaleTax();
+        System.out.println("Sale Tax (3% rate) : $ " + saleTax.createTax().calculate(100));
+        FactoryTax propertyTax = new FactoryPropertyTax();
+        System.out.println("Property Tax (10% rate) : $ " + propertyTax.createTax().calculate(100));
     }
 
 }
