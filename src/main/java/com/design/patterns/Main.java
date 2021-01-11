@@ -1,5 +1,9 @@
 package com.design.patterns;
 
+import com.design.patterns.creational.abstractFactory.FactoryTaxes;
+import com.design.patterns.creational.abstractFactory.factory.FactoryBusinessTax;
+import com.design.patterns.creational.abstractFactory.factory.FactoryIndividualTax;
+import com.design.patterns.creational.abstractFactory.model.BusinessSaleTax;
 import com.design.patterns.creational.factory.FactoryPropertyTax;
 import com.design.patterns.creational.factory.FactorySaleTax;
 import com.design.patterns.creational.factory.FactoryTax;
@@ -100,6 +104,19 @@ public class Main {
         System.out.println("Sale Tax (3% rate) : $ " + saleTax.createTax().calculate(100));
         FactoryTax propertyTax = new FactoryPropertyTax();
         System.out.println("Property Tax (10% rate) : $ " + propertyTax.createTax().calculate(100));
+
+        System.out.println("");
+
+        System.out.println("Creational -> Abstract Factory");
+        FactoryTaxes factoryBusiness = new FactoryBusinessTax();
+        System.out.println("Business -> Sale Tax (5% rate) : $ " + factoryBusiness.createProportionalTax().calculate(100));
+        System.out.println("Business -> Property Tax (20% rate) : $ " + factoryBusiness.createRegressiveTax().calculate(100));
+
+        FactoryTaxes factoryIndividualTax = new FactoryIndividualTax();
+        System.out.println("Individual -> Sale Tax (1% rate) : $ " + factoryIndividualTax.createProportionalTax().calculate(100));
+        System.out.println("Individual -> Property Tax (10% rate) : $ " + factoryIndividualTax.createRegressiveTax().calculate(100));
+
+
     }
 
 }
