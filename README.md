@@ -9,18 +9,18 @@ I covered the following topics :
 
 ## Creational
 
--[Abstract Factory](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/creational/abstractFactory)
--[Factory Method](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/creational/factory)
+- [Abstract Factory](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/creational/abstractFactory)
+- [Factory Method](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/creational/factory)
 
 ## Structural
 
--[Adapter](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/adapter)
--[Bridge](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/bridge)
--[Decorator](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/decorator)
--[Composite](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/composite)
--[Proxy](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/proxy)
--[Flyweight](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/flightweight)
--[Facade](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/facade)
+- [Adapter](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/adapter)
+- [Bridge](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/bridge)
+- [Decorator](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/decorator)
+- [Composite](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/composite)
+- [Proxy](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/proxy)
+- [Flyweight](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/flightweight)
+- [Facade](https://github.com/ads1986/design-patterns-examples/tree/main/src/main/java/com/design/patterns/structural/facade)
 
 # License
 
