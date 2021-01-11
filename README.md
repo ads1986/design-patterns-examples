@@ -3,7 +3,7 @@
 # Design Patterns
 
 The Design Patterns cataloged by [Erich Gamma](https://github.com/egamma), [Richard Helm](https://www.bcg.com/pt-br/about/people/experts/richard-helm), [Ralph Johnson](https://github.com/smalltalker55) and [John Vlissides](https://en.wikipedia.org/wiki/John_Vlissides) in the book [Design Patterns: Elements of Reusable Object-Oriented Software](https://www.amazon.com.br/Design-Patterns-Object-Oriented-Addison-Wesley-Professional-ebook/dp/B000SEIBB8/ref=asc_df_B000SEIBB8/?tag=googleshopp00-20&linkCode=df0&hvadid=379725882390&hvpos=&hvnetw=g&hvrand=16987175432751364423&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1001773&hvtargid=pla-406130702825&psc=1)
-are in my opinion the most important patterns to solve problems at the class-level in an application. In this repo, I implemented from the scratch each one of the patterns. I think this way becomes easy to understand and solidify the knowledge. 
+are in my opinion the most important patterns to solve problems at the class-level in an application. In this repo, I implemented from the scratch each one of the patterns.
 
 I covered the following topics :
 
