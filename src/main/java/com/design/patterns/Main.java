@@ -8,6 +8,7 @@ import com.design.patterns.creational.factory.FactoryPropertyTax;
 import com.design.patterns.creational.factory.FactorySaleTax;
 import com.design.patterns.creational.factory.FactoryTax;
 import com.design.patterns.creational.factory.Fee;
+import com.design.patterns.creational.singleton.SingletonUserSession;
 import com.design.patterns.structural.adapter.FileTypeConverter;
 import com.design.patterns.structural.adapter.impl.FileConverter;
 import com.design.patterns.structural.adapter.enums.FileType;
@@ -116,7 +117,27 @@ public class Main {
         System.out.println("Individual -> Sale Tax (1% rate) : $ " + factoryIndividualTax.createProportionalTax().calculate(100));
         System.out.println("Individual -> Property Tax (10% rate) : $ " + factoryIndividualTax.createRegressiveTax().calculate(100));
 
+        System.out.println("");
 
+        System.out.println("Creational -> Singleton");
+
+        SingletonUserSession session = SingletonUserSession.getInstance();
+
+        System.out.println("Set name and age ->");
+        session.setName("George");
+        session.setAge(20);
+        System.out.println("Name: " + session.getName() + " Age: " + session.getAge());
+
+        SingletonUserSession session2 = SingletonUserSession.getInstance();
+        System.out.println("Name: " + session2.getName() + " Age: " + session2.getAge());
+
+        System.out.println("Update name and age ->");
+        session.setName("George Ford");
+        session.setAge(21);
+
+        System.out.println("Name: " + session.getName() + " Age: " + session.getAge());
+
+        System.out.println("Name: " + session2.getName() + " Age: " + session2.getAge());
     }
 
 }
