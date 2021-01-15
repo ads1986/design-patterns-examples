@@ -8,6 +8,8 @@ import com.design.patterns.creational.factory.FactoryPropertyTax;
 import com.design.patterns.creational.factory.FactorySaleTax;
 import com.design.patterns.creational.factory.FactoryTax;
 import com.design.patterns.creational.factory.Fee;
+import com.design.patterns.creational.prototype.Car;
+import com.design.patterns.creational.prototype.Motorcycle;
 import com.design.patterns.creational.singleton.SingletonUserSession;
 import com.design.patterns.structural.adapter.FileTypeConverter;
 import com.design.patterns.structural.adapter.impl.FileConverter;
@@ -136,8 +138,23 @@ public class Main {
         session.setAge(21);
 
         System.out.println("Name: " + session.getName() + " Age: " + session.getAge());
-
         System.out.println("Name: " + session2.getName() + " Age: " + session2.getAge());
+
+        System.out.println("");
+
+        System.out.println("Creational -> Prototype");
+
+        Car car = new Car("Mustange", "Ford", 100.000);
+        System.out.println("Car -> Original - (" + car + ") Name: " + car.getName() + " Brand: " + car.getBrand() + "Price: " + car.getPrice());
+
+        Car carClone = car.clone();
+        System.out.println("Car -> Clone - (" + carClone + ") Name: " + carClone.getName() + " Brand: " + carClone.getBrand() + "Price: " + carClone.getPrice());
+
+        Motorcycle motorcycle = new Motorcycle("CBR600", "Honda", 10.000);
+        System.out.println("Motorcycle -> Original - (" + car + ") Name: " + car.getName() + " Brand: " + car.getBrand() + "Price: " + car.getPrice());
+
+        Motorcycle motorcycleClone = motorcycle.clone();
+        System.out.println("Motorcycle -> Clone - (" + motorcycleClone + ") Name: " + motorcycleClone.getName() + " Brand: " + motorcycleClone.getBrand() + "Price: " + motorcycleClone.getPrice());
     }
 
 }
