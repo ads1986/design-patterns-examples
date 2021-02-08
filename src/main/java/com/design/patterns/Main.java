@@ -1,14 +1,13 @@
 package com.design.patterns;
 
+import com.design.patterns.behavioral.chain.*;
 import com.design.patterns.creational.abstractFactory.FactoryTaxes;
 import com.design.patterns.creational.abstractFactory.factory.FactoryBusinessTax;
 import com.design.patterns.creational.abstractFactory.factory.FactoryIndividualTax;
-import com.design.patterns.creational.abstractFactory.model.BusinessSaleTax;
 import com.design.patterns.creational.builder.Customer;
 import com.design.patterns.creational.factory.FactoryPropertyTax;
 import com.design.patterns.creational.factory.FactorySaleTax;
 import com.design.patterns.creational.factory.FactoryTax;
-import com.design.patterns.creational.factory.Fee;
 import com.design.patterns.creational.prototype.Car;
 import com.design.patterns.creational.prototype.Motorcycle;
 import com.design.patterns.creational.singleton.SingletonUserSession;
@@ -41,7 +40,7 @@ import static java.util.Collections.singletonList;
  */
 public class Main {
 
-    public static void main(String args[]){
+    public static void main(String args[]) throws Exception {
         System.out.println("Structural -> Facade");
         CalculusService calculusService = new CalculusService(new CalculusFacadeImpl());
         System.out.println("Triangle Area : " + calculusService.calculateTriangleArea("3", "10"));
@@ -161,8 +160,14 @@ public class Main {
         Customer customer = Customer.builder().name("John").age(30).build();
         System.out.println("Name: " + customer.getName() + " / Age: " + customer.getAge());
 
+        System.out.println("Behavioral -> Chain of Responsibilities");
+        DeliveryChain delivery = new Fedex(DeliveryEnum.FEDEX);
+        delivery.setNext(new Dhl(DeliveryEnum.DHL));
+        delivery.setNext(new Ups(DeliveryEnum.UPS));
 
-
+        //delivery.choseCompany(DeliveryEnum.FEDEX);
+        //delivery.choseCompany(DeliveryEnum.DHL);
+        delivery.choseCompany(DeliveryEnum.UPS);
     }
 
 }
