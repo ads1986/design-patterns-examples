@@ -4,6 +4,7 @@ import com.design.patterns.creational.abstractFactory.FactoryTaxes;
 import com.design.patterns.creational.abstractFactory.factory.FactoryBusinessTax;
 import com.design.patterns.creational.abstractFactory.factory.FactoryIndividualTax;
 import com.design.patterns.creational.abstractFactory.model.BusinessSaleTax;
+import com.design.patterns.creational.builder.Customer;
 import com.design.patterns.creational.factory.FactoryPropertyTax;
 import com.design.patterns.creational.factory.FactorySaleTax;
 import com.design.patterns.creational.factory.FactoryTax;
@@ -155,6 +156,13 @@ public class Main {
 
         Motorcycle motorcycleClone = motorcycle.clone();
         System.out.println("Motorcycle -> Clone - (" + motorcycleClone + ") Name: " + motorcycleClone.getName() + " Brand: " + motorcycleClone.getBrand() + "Price: " + motorcycleClone.getPrice());
+
+        System.out.println("Creational -> Builder");
+        Customer customer = Customer.builder().name("John").age(30).build();
+        System.out.println("Name: " + customer.getName() + " / Age: " + customer.getAge());
+
+
+
     }
 
 }
