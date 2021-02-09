@@ -1,6 +1,10 @@
 package com.design.patterns;
 
 import com.design.patterns.behavioral.chain.*;
+import com.design.patterns.behavioral.command.Application;
+import com.design.patterns.behavioral.command.CloseGate;
+import com.design.patterns.behavioral.command.Gate;
+import com.design.patterns.behavioral.command.OpenGate;
 import com.design.patterns.creational.abstractFactory.FactoryTaxes;
 import com.design.patterns.creational.abstractFactory.factory.FactoryBusinessTax;
 import com.design.patterns.creational.abstractFactory.factory.FactoryIndividualTax;
@@ -165,9 +169,14 @@ public class Main {
         delivery.setNext(new Dhl(DeliveryEnum.DHL));
         delivery.setNext(new Ups(DeliveryEnum.UPS));
 
-        //delivery.choseCompany(DeliveryEnum.FEDEX);
-        //delivery.choseCompany(DeliveryEnum.DHL);
+        delivery.choseCompany(DeliveryEnum.FEDEX);
+        delivery.choseCompany(DeliveryEnum.DHL);
         delivery.choseCompany(DeliveryEnum.UPS);
+
+        System.out.println("Behavioral -> Command");
+        Application application = new Application(new OpenGate(new Gate()), new CloseGate(new Gate()));
+        application.openGate();
+        application.closeGate();
     }
 
 }
